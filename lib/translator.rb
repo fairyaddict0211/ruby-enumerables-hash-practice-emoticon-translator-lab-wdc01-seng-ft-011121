@@ -14,9 +14,9 @@ new_hash = {}
 end
 
 
-def get_japanese_emoticon(file_path, emoticon)
-  result = load_library(file_path)['get_emoticon'][emoticon]
-  result ? result : "Sorry, that emoticon was not found"
+def get_japanese_emoticon(file_path, emoticons)
+  new_hash = load_library(file_path)['get_emoticon'][emoticons]
+  new_hash ? new_hash : "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(file_path, emoticon)
